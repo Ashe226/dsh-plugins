@@ -1,6 +1,6 @@
 # dsh-plugins
 
-自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
+DooKoi（Ashe226）自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
 
 ## 插件目录
 
