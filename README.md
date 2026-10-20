@@ -3,9 +3,9 @@
 [![release](https://img.shields.io/github/v/release/DooKoi/dsh-plugins?label=release)](https://github.com/DooKoi/dsh-plugins/releases)
 [![license](https://img.shields.io/github/license/DooKoi/dsh-plugins)](LICENSE)
 
-DooKoi自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
+**DooKoi** 自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
 
-> 旧用户名 `Ashe226` 与旧链接仍然可用——GitHub 会自动 301 跳到现在的地址。
+> 包名统一用 `@dookoi/*` 命名空间；它与仓库当前用户名 `DooKoi` 不一致，属于早期命名沿用至今，不影响安装和使用。
 
 ## 插件目录
 
