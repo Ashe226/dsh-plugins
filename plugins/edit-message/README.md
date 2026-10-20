@@ -14,7 +14,7 @@
 
 ```sh
 # 1) 先拿到仓库
-git clone https://github.com/Ashe226/dsh-plugins.git
+git clone https://github.com/DooKoi/dsh-plugins.git
 
 # 2) 装这一个插件（指向插件目录，不是仓库根）
 dsh plugin --profile web add ./dsh-plugins/plugins/edit-message
