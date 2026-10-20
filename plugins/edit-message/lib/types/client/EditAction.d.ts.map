@@ -1,0 +1,1 @@
+{"version":3,"file":"EditAction.d.ts","sourceRoot":"","sources":["../../../src/client/EditAction.tsx"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAEH,OAAO,EAA0C,KAAK,SAAS,EAAE,MAAM,OAAO,CAAA;AAK9E,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,YAAY,CAAA;AAEjD;;;;;GAKG;AACH,wBAAgB,UAAU,CAAC,EACzB,SAAS,EAAE,GAAG,EAAE,YAAY,EAAE,IAAI,EAAE,OAAO,EAAE,UAAU,EAAE,CAAC,GAC3D,EAAE,eAAe,GAAG,SAAS,CAuD7B"}

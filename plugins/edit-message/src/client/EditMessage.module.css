@@ -1,0 +1,186 @@
+/* The live bubble steps aside while its editor stands in the same place. The
+   anchor attribute is unhashed on purpose: the class name is not addressable
+   from outside the rendering package. */
+[data-user-bubble][data-editing] {
+  display: none;
+}
+
+/* The bubble stack shrink-wraps its bubble and caps at a share of the column;
+   while editing it must be free to hold a dragged width. The doubled attribute
+   keeps this ahead of the shipped userStack rule. */
+[data-edit-message-host][data-edit-message-host] {
+  max-width: 100%;
+}
+
+/* Same geometry and tier as the shipped copy/branch glyphs beside it. */
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(28px + var(--dsh-content-font-delta, 0px));
+  height: calc(28px + var(--dsh-content-font-delta, 0px));
+  padding: 6px;
+  border: none;
+  border-radius: var(--dsw-radius-sm);
+  background: transparent;
+  color: var(--dsw-alias-label-tertiary);
+  cursor: pointer;
+}
+
+.action svg {
+  width: calc(15px + var(--dsh-content-font-delta, 0px));
+  height: calc(15px + var(--dsh-content-font-delta, 0px));
+}
+
+.action:hover:not([data-unavailable]) {
+  background: var(--dsw-alias-interactive-bg-hover);
+  color: var(--dsw-alias-label-secondary);
+}
+
+/* Unavailable stays focusable and hoverable so the tooltip can explain why. */
+.action[data-unavailable] {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.action[data-unavailable]:hover {
+  background: transparent;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.action[data-editing] {
+  background: var(--dsw-alias-interactive-bg-hover);
+  color: var(--dsw-alias-label-secondary);
+}
+
+.inline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+
+/* Once a height is dragged the box stops growing with the text and the input
+   scrolls inside the frame instead. */
+.inline[data-height-locked] .input {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* At the minimum height the input gives way, never the actions. */
+.inline[data-height-locked] .row,
+.inline[data-height-locked] .error {
+  flex: none;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.error {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-danger, #d4380d);
+  white-space: pre-wrap;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+/* Info line + the two actions, matching the composer's quiet footer. */
+.note {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.noteIcon {
+  display: inline-flex;
+  flex: none;
+  opacity: 0.8;
+}
+
+.noteIcon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.noteText {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.grip {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 12px;
+  height: 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  color: var(--dsw-alias-label-tertiary);
+  opacity: 0.45;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+.grip:hover,
+.grip:focus-visible {
+  opacity: 1;
+  outline: none;
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.grip svg {
+  width: 10px;
+  height: 10px;
+}
+
+.fallback {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.32);
+  padding: 24px;
+}
+
+.fallback > .inline {
+  width: min(680px, 100%);
+  padding: 16px;
+  border-radius: var(--dsw-radius-xl);
+  background: var(--dsw-surface, #fff);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+}

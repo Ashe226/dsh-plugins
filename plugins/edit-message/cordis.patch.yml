@@ -1,0 +1,13 @@
+# Bundle patch for out-of-tree installs of this plugin.
+#
+# Installed into a profile (`dsh plugin --profile web add
+# @dookoi/dsh-client-ui-edit-message`), this file is applied as the package's
+# own layer and registers the single Loader row that mounts the plugin: the
+# host half (`lib/index.js`) occupies the row, and `dsh.client` in package.json
+# is what makes the browser half (`lib/client.js`) discoverable.
+#
+# Inside this repository the same row is already registered by
+# `packages/bundle/web-app/cordis.patch.yml`, so this layer is not used there.
+- insert:
+    - id: ui-edit-message
+      name: '@dookoi/dsh-client-ui-edit-message'

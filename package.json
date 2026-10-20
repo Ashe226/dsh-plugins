@@ -1,0 +1,7 @@
+{
+  "name": "dsh-plugins",
+  "private": true,
+  "description": "自研 DeepSeek Harness 插件合集",
+  "license": "MIT",
+  "packageManager": "pnpm@12.11.2"
+}
