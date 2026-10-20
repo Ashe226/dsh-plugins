@@ -5,7 +5,7 @@
 
 **DooKoi** 自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
 
-> 包名统一用 `@dookoi/*` 命名空间；它与仓库当前用户名 `DooKoi` 不一致，属于早期命名沿用至今，不影响安装和使用。
+> 包名统一用 `@dookoi/*` 命名空间，与仓库所有者一致。
 
 ## 插件目录
 
@@ -44,7 +44,7 @@ dsh plugin --profile web remove @dookoi/dsh-client-ui-edit-message
 | 场景 | 发什么 |
 |---|---|
 | 对方会命令行、有 dsh | **仓库地址**：`https://github.com/DooKoi/dsh-plugins`，再补一句上面的三条命令 |
-| 对方不想 clone | **Release 里的 tgz**：[v0.1.0](https://github.com/DooKoi/dsh-plugins/releases/latest)，下载后 `dsh plugin --profile web add ./dookoi-dsh-client-ui-edit-message-0.1.0.tgz` |
+| 对方不想 clone | **Release 里的 tgz**：[v0.1.1](https://github.com/DooKoi/dsh-plugins/releases/latest)，下载后 `dsh plugin --profile web add ./dookoi-dsh-client-ui-edit-message-0.1.1.tgz` |
 | 对方只是好奇看看 | **Release 页面**或 README，不用装 |
 
 最短的一段话，可以直接复制给对方：

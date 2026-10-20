@@ -1,6 +1,6 @@
 {
   "name": "@dookoi/dsh-client-ui-edit-message",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness 插件：在对话里直接编辑已发送的用户消息，并从该条重新分叉会话。",
   "type": "module",
   "main": "lib/index.js",

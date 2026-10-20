@@ -20,7 +20,7 @@ git clone https://github.com/DooKoi/dsh-plugins.git
 dsh plugin --profile web add ./dsh-plugins/plugins/edit-message
 
 # 或者从 tarball 装
-dsh plugin --profile web add ./dookoi-dsh-client-ui-edit-message-0.1.0.tgz
+dsh plugin --profile web add ./dookoi-dsh-client-ui-edit-message-0.1.1.tgz
 
 # 3) 重启
 dsh web
