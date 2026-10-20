@@ -1,6 +1,11 @@
 # dsh-plugins
 
+[![release](https://img.shields.io/github/v/release/DooKoi/dsh-plugins?label=release)](https://github.com/DooKoi/dsh-plugins/releases)
+[![license](https://img.shields.io/github/license/DooKoi/dsh-plugins)](LICENSE)
+
 DooKoi自研的 **DeepSeek Harness**（`dsh`）插件合集。每个插件是 `plugins/` 下一个独立包，可以单独安装、单独发布，互不干扰。
+
+> 旧用户名 `Ashe226` 与旧链接仍然可用——GitHub 会自动 301 跳到现在的地址。
 
 ## 插件目录
 
@@ -33,6 +38,28 @@ cat ~/.dsh/profiles/web/package.json    # dsh.profile.bundles 里应出现对应
 ```sh
 dsh plugin --profile web remove @dookoi/dsh-client-ui-edit-message
 ```
+
+## 分享给朋友
+
+| 场景 | 发什么 |
+|---|---|
+| 对方会命令行、有 dsh | **仓库地址**：`https://github.com/DooKoi/dsh-plugins`，再补一句上面的三条命令 |
+| 对方不想 clone | **Release 里的 tgz**：[v0.1.0](https://github.com/DooKoi/dsh-plugins/releases/latest)，下载后 `dsh plugin --profile web add ./dookoi-dsh-client-ui-edit-message-0.1.0.tgz` |
+| 对方只是好奇看看 | **Release 页面**或 README，不用装 |
+
+最短的一段话，可以直接复制给对方：
+
+```
+这个仓库是 DeepSeek Harness 的自研插件合集：
+https://github.com/DooKoi/dsh-plugins
+
+装某个插件（以 edit-message 为例）：
+git clone https://github.com/DooKoi/dsh-plugins.git
+dsh plugin --profile web add ./dsh-plugins/plugins/edit-message
+dsh web
+```
+
+对方要是不用 Git，把 Release 里那个 `.tgz` 直接发过去，`dsh plugin add <文件路径>` 一样能装。
 
 ## 仓库结构
 
